@@ -12,7 +12,7 @@ import pathlib
 @st.cache_resource
 def load_model():
     model_path = pathlib.Path(__file__).parent / "doraemon_walle_model.pkl"
-    return load_learner(model_path)
+    return learner.load(model_path)
 
 model = load_model()
 
